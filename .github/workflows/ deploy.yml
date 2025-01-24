@@ -22,4 +22,3 @@ jobs:
           password: PqfZRQrG49lH4z
           local-dir: ./
           server-dir: /htdocs/
-          log-level: minimal
