@@ -9,15 +9,18 @@
   <!-- 引入layui JS -->
   <script src="/js/layui.js"></script>
   <link rel="stylesheet" href="/css/index.css">
-  <script src="/js/index.js"></script>
 </head>
 <body>
-  <i id="iconPlayButton" class="fa fa-play"></i>
-  <audio id="audioPlayer" src="/audio/background.mp3"></audio>
   <header>
+    <audio autoplay loop controls style="position:absolute;top:0;left:0;">
+      <source src="/audio/background.mp3" type="audio/mpeg">
+    </audio>
     <h1>欢迎来到我们的基地</h1>
     <p>BYZC</p>
   </header>
+  <nav>
+    <a href="/">返回主页</a>
+  </nav>
   <h2>普通基地</h2>
   <table class="layui-table">
     <thead>

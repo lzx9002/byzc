@@ -46,7 +46,7 @@
     ready: function (callback) {
       var cssname = 'laydate';
       var ver = '';
-      var path = (isLayui ? '/modules/' : '/') + 'laydate.css';
+      var path = (isLayui ? 'modules/' : '') + 'laydate.css?v=' + laydate.v + ver;
 
       isLayui ? (
         layui['layui.all'] ?

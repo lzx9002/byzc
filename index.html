@@ -11,10 +11,12 @@
     <!-- 引入layui JS -->
     <script src="/js/layui.js"></script>
     <link rel="stylesheet" href="/css/index.css">
-    <script src="/js/index.js"></script>
 </head>
 <body>
     <header>
+        <audio autoplay loop controls style="position:absolute;top:0;left:0;">
+            <source src="/audio/background.mp3" type="audio/mpeg">
+        </audio>
         <h1>欢迎来到我们的基地</h1>
         <p>BYZC</p>
     </header>
@@ -35,20 +37,15 @@
                 <li><a>lzx9002</a></li>
             </ul>
         </div>
-
+        <h2>基地截图</h2>
         <div id="screenshots" class="section">
-            <h2>基地截图</h2>
-            <div class="layui-carousel" id="ID-carousel-demo-image">
-                <div carousel-item>
-                    <div><img src="/img/figure/1.png" alt="1"></div>
-                    <div><img src="/img/figure/2.png" alt="2"></div>
-                    <div><img src="/img/figure/3.png" alt="3"></div>
-                    <div><img src="/img/figure/4.png" alt="4"></div>
-                </div>
-            </div>
+            <img src="/img/thumbnail/4.png" alt="4" class="btn" onclick="layer.photos({photos: {'title': 'Photos Demo', 'start': 0, 'data': [{'alt': '4','pid': 4,'src': '/img/figure/4.png'}]}});">
+            <img src="/img/thumbnail/2.png" alt="2" class="btn" onclick="layer.photos({photos: {'title': 'Photos Demo', 'start': 0, 'data': [{'alt': '2','pid': 2,'src': '/img/figure/2.png'}]}});">
+            <img src="/img/thumbnail/3.png" alt="3" class="btn" onclick="layer.photos({photos: {'title': 'Photos Demo', 'start': 0, 'data': [{'alt': '3','pid': 3,'src': '/img/figure/3.png'}]}});">
+            <img src="/img/thumbnail/4.png" alt="4" class="btn" onclick="layer.photos({photos: {'title': 'Photos Demo', 'start': 0, 'data': [{'alt': '4','pid': 4,'src': '/img/figure/4.png'}]}});">
         </div>
 
-        <div id="players" class="section">
+        <div id="players" class="section" style="width: 50%;">
             <h2>玩家列表</h2>
             <table class="layui-table">
                 <thead>
@@ -110,12 +107,46 @@
     <script>
         layui.use(function(){
             var carousel = layui.carousel;
+            var layer = layui.layer;
+            var util = layui.util;
             // 渲染 - 图片轮播
             carousel.render({
-                elem: '#ID-carousel-demo-image',
+                elem: '#carousel-screenshots-image',
                 width: '1600px',
                 height: '837px',
                 interval: 3000
+            });
+            util.on('lay-on', {
+                photots: function(){
+                    layer.photos({
+                        photos: {
+                            "title": "screenshots",
+                            "start": 0,
+                            "data": [
+                                {
+                                    "alt": "1",
+                                    "pid": 1,
+                                    "src": "/img/figure/1.png",
+                                },
+                                {
+                                    "alt": "4",
+                                    "pid": 2,
+                                    "src": "/img/figure/2.png",
+                                },
+                                {
+                                    "alt": "4",
+                                    "pid": 3,
+                                    "src": "/img/figure/3.png",
+                                },
+                                {
+                                    "alt": "4",
+                                    "pid": 4,
+                                    "src": "/img/figure/4.png",
+                                }
+                            ]
+                        }
+                    });
+                }
             });
         });
     </script>

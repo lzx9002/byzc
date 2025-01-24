@@ -327,7 +327,7 @@
 
   // css 内部加载器
   Layui.prototype.addcss = function(firename, fn, cssname){
-    return layui.link(config.dir + 'css/' + firename, fn, cssname);
+    return layui.link('/css/' + firename, fn, cssname);
   };
 
   // 存储模块的回调
