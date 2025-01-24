@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>碧月云BYZC</title>
+    <!-- 引入layui CSS -->
+    <link rel="stylesheet" href="/css/layui.css">
+    <!-- 引入jQuery -->
+    <script src="/js/jquery-3.7.1.min.js"></script>
+    <!-- 引入layui JS -->
+    <script src="/js/layui.js"></script>
+    <link rel="stylesheet" href="/css/index.css">
+    <script src="/js/index.js"></script>
+</head>
+<body>
+    <header>
+        <h1>欢迎来到我们的基地</h1>
+        <p>BYZC</p>
+    </header>
+
+    <nav>
+        <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=ZNq52Fv4vdHIwWy9a3SVYX4Z82VpgabZ&authKey=drYg27aBFynviSDQq5y5%2BCLE6LnLrSBbnvWaFaMeuJwAHTewGW3Ww5U25MY6Gh8H&noverify=0&group_code=673189479">加入我们</a>
+        <a href="/shili.html">服务器势力</a>
+        <a href="/zc.html">关于BYZC</a>
+    </nav>
+
+    <div class="container">
+        <div id="contact" class="section">
+            <h2>联系我们</h2>
+            <ul>
+                <li>中国·重庆·北碚</li>
+                <li><a href="mailto:xk477@qq.com">xk477@qq.com</a></li>
+                <li>开发者</li>
+                <li><a>lzx9002</a></li>
+            </ul>
+        </div>
+
+        <div id="screenshots" class="section">
+            <h2>基地截图</h2>
+            <div class="layui-carousel" id="ID-carousel-demo-image">
+                <div carousel-item>
+                    <div><img src="/img/figure/1.png" alt="1"></div>
+                    <div><img src="/img/figure/2.png" alt="2"></div>
+                    <div><img src="/img/figure/3.png" alt="3"></div>
+                    <div><img src="/img/figure/4.png" alt="4"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="players" class="section">
+            <h2>玩家列表</h2>
+            <table class="layui-table">
+                <thead>
+                <tr>
+                    <th>加入顺序</th>
+                    <th>玩家名称</th>
+                    <th>职位</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>zcagz</td>
+                    <td>创建者</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>onjil</td>
+                    <td>管理员</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>lzx9002</td>
+                    <td>管理员</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>212722</td>
+                    <td>管理员</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>wjr</td>
+                    <td>普通成员</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>myy</td>
+                    <td>普通成员</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>zcw</td>
+                    <td>普通成员</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>LinMzzz</td>
+                    <td>普通成员</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        ©2025 BYZC保留所有权利
+    </footer>
+    <script>
+        layui.use(function(){
+            var carousel = layui.carousel;
+            // 渲染 - 图片轮播
+            carousel.render({
+                elem: '#ID-carousel-demo-image',
+                width: '1600px',
+                height: '837px',
+                interval: 3000
+            });
+        });
+    </script>
+</body>
+</html>
