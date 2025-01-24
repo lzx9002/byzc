@@ -1,0 +1,24 @@
+name: Deploy to FTP
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Deploy to FTP
+        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+        with:
+          server: 185.27.134.11
+          username: if0_38146531
+          password: PqfZRQrG49lH4z
+          local-dir: ./
+          server-dir: /htdocs/
+          log-level: minimal
