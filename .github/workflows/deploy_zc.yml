@@ -1,4 +1,4 @@
-name: zc FTP server
+name: Deploy to zc FTP server
 
 on:
   push:
