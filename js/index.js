@@ -1,15 +1,17 @@
-const iconPlayButton = document.getElementById('iconPlayButton');
-const audioPlayer = document.getElementById('audioPlayer');
-
-iconPlayButton.addEventListener('click', () => {
-    if (audioPlayer.paused) {
-        audioPlayer.play();
-        iconPlayButton.classList.remove('fa-play');
-        iconPlayButton.classList.add('fa-pause');
-    } else {
-        audioPlayer.pause();
-        iconPlayButton.classList.remove('fa-pause');
-        iconPlayButton.classList.add('fa-play');
-    }
-});
-    
+function load_html(file_name) {
+    $.ajax({
+        url: file_name,
+        method: 'GET',
+        dataType: 'html',
+        success: function(data) {
+            // 解析 HTML
+            const $html = $(data);
+            const $body = $html.filter('#body');
+            // 或者，直接插入整个 HTML 内容
+            $('#body').html($body);
+        },
+        error: function(xhr, status, error) {
+            $('#body').html(status+'<br>'+error);
+        }
+    });
+}
