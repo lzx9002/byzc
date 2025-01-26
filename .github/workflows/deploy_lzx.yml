@@ -19,6 +19,6 @@ jobs:
         with:
           server: zc.5ibc.cn
           username: ftpadmin
-          password: 123456
+          password: 123456789
           local-dir: ./
           server-dir: /htdocs/
